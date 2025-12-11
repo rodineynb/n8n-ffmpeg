@@ -38,36 +38,3 @@ jobs:
             rodcloud/n8n-ffmpeg:${{ steps.get_version.outputs.version }}
           cache-from: type=registry,ref=rodcloud/n8n-ffmpeg:latest
           cache-to: type=inline
-```
-
-4. **Commit changes:**
-   - Mensagem: `Add GitHub Actions workflow`
-   - Clique em **"Commit changes"**
-
-**Me confirme quando fizer!** ✅
-
----
-
-## 📋 **PASSO 4: Adicionar os Secrets do Docker Hub**
-
-Agora precisamos adicionar suas credenciais do Docker Hub de forma segura:
-
-1. **No seu repositório GitHub**, clique em **"Settings"** (última aba no topo)
-
-2. **No menu lateral esquerdo**, procure por **"Secrets and variables"** → clique em **"Actions"**
-
-3. **Clique no botão verde "New repository secret"**
-
-4. **Criar o primeiro secret:**
-```
-   Name: DOCKER_USERNAME
-   Secret: rodcloud
-```
-   - Clique em **"Add secret"**
-
-5. **Clique novamente em "New repository secret"** para criar o segundo:
-
-6. **Criar o segundo secret:**
-```
-   Name: DOCKER_PASSWORD
-   Secret: [SUA SENHA DO DOCKER HUB]
